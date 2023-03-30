@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <%- include('../includes/head.ejs') %>
+  <body class="theme-cyan">
+    <%- include('../includes/navigation.ejs') %>
+
+    <aside id="leftsidebar" class="sidebar">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#dashboard"
+            ><ion-icon name="home"></ion-icon>Hospital</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#user">Admin</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane stretchRight active" id="dashboard">
+          <div class="menu">
+            <ul class="list">
+              <li>
+                <div class="user-info">
+                  <div class="image">
+                    <a href="#"
+                      ><img src="/images/profile_av.jpg" alt="User"
+                    /></a>
+                  </div>
+                  <div class="detail">
+                    <h4>Dr. <%= lastname %></h4>
+                    <small>ADMIN</small>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="/"
+                  ><ion-icon name="home"></ion-icon><span>Dashboard</span></a
+                >
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="menu-toggle"
+                  ><i class="zmdi zmdi-account-add"></i><span>Accountants</span>
+                </a>
+                <ul class="ml-menu">
+                  <li><a href="/all-accountant">All Accountants</a></li>
+                  <li><a href="/add-accountant">Add Accountant</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="menu-toggle"
+                  ><i class="zmdi zmdi-account-add"></i><span>Doctors</span>
+                </a>
+                <ul class="ml-menu">
+                  <li><a href="/all-doctor">All Doctors</a></li>
+                  <li><a href="/add-doctor">Add Doctor</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="menu-toggle"
+                  ><i class="zmdi zmdi-account-add"></i><span>Lab Scientists</span>
+                </a>
+                <ul class="ml-menu">
+                  <li><a href="/all-labscientist">All Lab Scientists</a></li>
+                  <li><a href="/add-labscientist">Add Lab Scientist</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="menu-toggle"
+                  ><i class="zmdi zmdi-account-add"></i><span>Nurses</span>
+                </a>
+                <ul class="ml-menu">
+                  <li><a href="/all-nurse">All Nurses</a></li>
+                  <li><a href="/add-nurse">Add Nurse</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="menu-toggle"
+                  ><i class="zmdi zmdi-account-add"></i><span>Receptionists</span>
+                </a>
+                <ul class="ml-menu">
+                  <li><a href="/all-receptionist">All Receptionists</a></li>
+                  <li><a href="/add-receptionist">Add Receptionist</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="progress-container progress-primary m-t-10">
+                  <span class="progress-badge">Traffic this Month</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-warning"
+                      role="progressbar"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 67%"
+                    >
+                      <span class="progress-value">67%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-container progress-info">
+                  <span class="progress-badge">Server Load</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-warning"
+                      role="progressbar"
+                      aria-valuenow="86"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 86%"
+                    >
+                      <span class="progress-value">86%</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane stretchLeft" id="user">
+          <div class="menu">
+            <ul class="list">
+              <li>
+                <div class="user-info m-b-20 p-b-15">
+                  <div class="image">
+                    <a href="#"
+                      ><img src="/images/profile_av.jpg" alt="User"
+                    /></a>
+                  </div>
+                  <div class="detail">
+                    <h4>Dr. <%= lastname %></h4>
+                    <small>ADMIN</small>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <a title="facebook" href="#"
+                        ><ion-icon name="logo-facebook"></ion-icon
+                      ></a>
+                      <a title="twitter" href="#"
+                        ><ion-icon name="logo-twitter"></ion-icon
+                      ></a>
+                      <a title="instagram" href="#"
+                        ><ion-icon name="logo-instagram"></ion-icon
+                      ></a>
+                    </div>
+                    <div class="col-4 p-r-0">
+                      <h5 class="m-b-5">18</h5>
+                      <small>Exp</small>
+                    </div>
+                    <div class="col-4">
+                      <h5 class="m-b-5">125</h5>
+                      <small>Awards</small>
+                    </div>
+                    <div class="col-4 p-l-0">
+                      <h5 class="m-b-5">148</h5>
+                      <small>Clients</small>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <small class="text-muted">Location: </small>
+                <p><%= address %></p>
+                <hr />
+                <small class="text-muted">Email address: </small>
+                <p>
+                  <a href="" class="__cf_email__">
+                    <%= email %>
+                  </a>
+                </p>
+                <hr />
+                <small class="text-muted">Phone: </small>
+                <p><%= phone %></p>
+                <hr />
+                <ul class="list-unstyled">
+                  <li>
+                    <div>Colorectal Surgery</div>
+                    <div class="progress m-b-20">
+                      <div
+                        class="progress-bar l-blue"
+                        role="progressbar"
+                        aria-valuenow="89"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 89%"
+                      >
+                        <span class="sr-only">62% Complete</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>Endocrinology</div>
+                    <div class="progress m-b-20">
+                      <div
+                        class="progress-bar l-green"
+                        role="progressbar"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 56%"
+                      >
+                        <span class="sr-only">87% Complete</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>Dermatology</div>
+                    <div class="progress m-b-20">
+                      <div
+                        class="progress-bar l-amber"
+                        role="progressbar"
+                        aria-valuenow="78"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 78%"
+                      >
+                        <span class="sr-only">32% Complete</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>Neurophysiology</div>
+                    <div class="progress m-b-20">
+                      <div
+                        class="progress-bar l-blush"
+                        role="progressbar"
+                        aria-valuenow="43"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 43%"
+                      >
+                        <span class="sr-only">56% Complete</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="block-header">
+        <div class="row">
+          <div class="col-lg-7 col-md-5 col-sm-12">
+            <h2>
+              Add Receptionists
+              <small class="text-muted">Welcome to Hospital</small>
+            </h2>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-12">
+            <button
+              class="btn btn-white btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
+              type="button"
+            >
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <ul class="breadcrumb float-md-right">
+              <li class="breadcrumb-item">
+                <a href="/"><ion-icon name="home"></ion-icon> Hospital</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0);">Receptionists</a>
+              </li>
+              <li class="breadcrumb-item active">Add Receptionists</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row clearfix">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <form method="post" action="/add-receptionist" class="card" enctype="multipart/form-data">
+              <div class="header">
+                <h2>
+                  <strong>Basic</strong> Information
+                  <small>Description text here...</small>
+                </h2>
+                <ul class="header-dropdown">
+                  <li class="remove">
+                    <a role="button" class="boxs-close">
+                      <ion-icon name="close"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="body">
+                <% if (errorMessage) { %>
+                  <div class="alert alert-warning">
+                    <strong>Warning!</strong> <%= errorMessage %>.
+                  </div>
+                  <% } %> 
+                <div class="row clearfix">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="firstname"
+                        placeholder="First Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="lastname"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="middlename"
+                        placeholder="Middle Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="username"
+                        placeholder="User Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        placeholder="Password"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="comfirmpassword"
+                        placeholder="Confirm Password"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="HospitalAffiliations"
+                        placeholder="Hospital Affiliations"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="Reception School"
+                        placeholder="Reception School"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="Residency"
+                        placeholder="Residency"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="Certifications"
+                        placeholder="Certifications"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="ExperienceOrTranining"
+                        placeholder="Experience / Tranining"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="Internship"
+                        placeholder="Internship"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <input
+                        type="date"
+                        class="form-control"
+                        name="dateofbirth"
+                        placeholder="Date of Birth"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <select class="form-control show-tick" name="gender">
+                      <option value="">- Gender -</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="job_post"
+                        placeholder="Job Post"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="phone"
+                        placeholder="Phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="address"
+                        placeholder="Home Address"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <div><h6>.....click to upload Profile picture.</h6></div>
+                      <input class="form-control"  type="file" name="profileimage"  >
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <textarea
+                        rows="4"
+                        class="form-control no-resize"
+                        placeholder="Remarks"
+                        name="remarks"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <textarea
+                        rows="4"
+                        class="form-control no-resize"
+                        placeholder="specialities"
+                        name="specialities"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <textarea
+                        rows="4"
+                        class="form-control no-resize"
+                        placeholder="About"
+                        name="about"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                    <button type="submit" class="btn btn-primary btn-round">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="/assets/bundles/libscripts.bundle.js"></script>
+    <script src="/assets/bundles/vendorscripts.bundle.js"></script>
+    <script src="/plugins/dropzone/dropzone.js"></script>
+    <script src="/assets/bundles/mainscripts.bundle.js"></script>
+    <script>
+      (function () {
+        var js =
+          "window['__CF$cv$params']={r:'747b777c1f47d404',m:'E1DbjIUHsq3pU3RIxrmeYxdvhHReHerkYAt_ici7ITk-1662679771-0-AXM3XSih7lRrc3xU7bVZt9le7hAKSX6LaEKQSKteBVNGtXpwb1W1iuIhaIj9kuDdzwULw46+Mgymtt5rcUiTlfBSDFz69f9CX6bgG4PW/Jk2L0jv8yplzGtebV5PaCIBStFej+YoztAcBMeePxlLXm1rVwNL/w4FLtA1bqycQa6ra/21a5O4+7m5ahn9Lw3qbg==',s:[0x782936177b,0x0e34aa8320],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";
+        var _0xh = document.createElement('iframe');
+        _0xh.height = 1;
+        _0xh.width = 1;
+        _0xh.style.position = 'absolute';
+        _0xh.style.top = 0;
+        _0xh.style.left = 0;
+        _0xh.style.border = 'none';
+        _0xh.style.visibility = 'hidden';
+        document.body.appendChild(_0xh);
+        function handler() {
+          var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+          if (_0xi) {
+            var _0xj = _0xi.createElement('script');
+            _0xj.nonce = '';
+            _0xj.innerHTML = js;
+            _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+          }
+        }
+        if (document.readyState !== 'loading') {
+          handler();
+        } else if (window.addEventListener) {
+          document.addEventListener('DOMContentLoaded', handler);
+        } else {
+          var prev = document.onreadystatechange || function () {};
+          document.onreadystatechange = function (e) {
+            prev(e);
+            if (document.readyState !== 'loading') {
+              document.onreadystatechange = prev;
+              handler();
+            }
+          };
+        }
+      })();
+    </script>
+  </body>
+</html>
